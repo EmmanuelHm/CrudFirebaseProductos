@@ -58,6 +58,7 @@ class _ProductsScreenBody extends StatelessWidget {
                     child: IconButton(
                         onPressed: () async {
                           final picker = ImagePicker();
+                          // ignore: deprecated_member_use
                           final PickedFile? pickedFile = await picker.getImage(
                             // source: ImageSource.gallery,
                             source: ImageSource.camera,
@@ -65,7 +66,7 @@ class _ProductsScreenBody extends StatelessWidget {
                           );
 
                           if (pickedFile == null) {
-                            print('No selecciono nada');
+                            // print('No selecciono nada');
                             return;
                           }
 
@@ -124,6 +125,7 @@ class _ProductForm extends StatelessWidget {
                 initialValue: product.name,
                 onChanged: (value) => product.name = value,
                 validator: (value) {
+                  // ignore: prefer_is_empty
                   if (value == null || value.length < 1) {
                     return 'El nombre es obligatorio';
                   }

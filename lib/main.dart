@@ -16,6 +16,7 @@ class AppState extends StatelessWidget {
           create: (_) => ProductsServices(),
         ),
       ],
+      // ignore: prefer_const_constructors
       child: MyApp(),
     );
   }
@@ -31,8 +32,11 @@ class MyApp extends StatelessWidget {
       title: 'Productos App',
       initialRoute: 'home',
       routes: {
+        // ignore: prefer_const_constructors
         'login': (_) => LoginScreen(),
+        // ignore: prefer_const_constructors
         'home': (_) => HomeScreen(),
+        // ignore: prefer_const_constructors
         'product': (_) => ProductScreen(),
       },
       theme: ThemeData.light().copyWith(

@@ -22,7 +22,7 @@ class ProductCard extends StatelessWidget {
             _BackgroundImage(product.picture),
             _ProductDetail(product: product),
             Positioned(top: 0, right: 0, child: _PriceTag(product: product)),
-            // TODO: Mostrar de manera condicional
+            // Mostrar de manera condicional
             if (!product.available)
               Positioned(top: 0, left: 0, child: _NoteAvailable()),
           ],
